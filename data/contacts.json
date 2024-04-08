@@ -1,0 +1,58 @@
+[
+  {
+    "full_name": "Kana",
+    "phone_number": "333-444-7431",
+    "email": "kana@gmail.com",
+    "tags": "sales,engineering,design",
+    "id": 1
+  },
+  {
+    "full_name": "Cruz",
+    "phone_number": "344-353-2222",
+    "email": "cruz@gmail.com",
+    "tags": "engineering",
+    "id": 2
+  },
+  {
+    "full_name": "Esther",
+    "phone_number": "232-434-1111",
+    "email": "esther@gmail.com",
+    "tags": "marketing,engineering",
+    "id": 3
+  },
+  {
+    "full_name": "Trish",
+    "phone_number": "893-343-2455",
+    "email": "trish@gmail.com",
+    "tags": "sales,engineering",
+    "id": 4
+  },
+  {
+    "full_name": "Paco",
+    "phone_number": "533-343-1232",
+    "email": "paco@yahoo.com",
+    "tags": "marketing,engineering",
+    "id": 5
+  },
+  {
+    "full_name": "Amy",
+    "phone_number": "555-444-3321",
+    "email": "amy@aol.com",
+    "tags": "marketing,engineering",
+    "id": 6
+  },
+  {
+    "full_name": "AJ",
+    "phone_number": "534-353-2322",
+    "email": "aj@hotmail.com",
+    "tags": "engineering,support",
+    "id": 7
+  },
+  {
+    "full_name": "Nick",
+    "phone_number": "539-998-7776",
+    "email": "nick@msn.com",
+    "tags": "engineering",
+    "id": 8
+  }
+]

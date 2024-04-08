@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="/javascripts/jquery.js"></script>
+  <script src="/javascripts/handlebars.js"></script>
+  <script src="/javascripts/app.js"></script>
+  <link rel="stylesheet" href="/stylesheets/contacts.css">
+  <script id="tag-template" type="text/x-handlebars-template">
+    {{#each tags}}
+    <div class="tag" data-tag="{{this}}">
+    <label>
+      <input type="checkbox" name="{{this}}" value="{{this}}">
+      {{this}}
+      <button class="tag-delete contact-button" type="button" data-tag="{{this}}">Delete</button>
+    </label>
+    </div>
+    {{/each}}
+  </script> 
+</head>
+<body>
+  <header>Contact Manager</header>
+  <main id="main-container">
+    <div id="add-contact-box">
+      <h2>Create Contact</h2>
+      <form id="add-contact-form">
+        <div id="add-contact-form-fields">
+          <div id="form-name">
+            <label for="full_name">Full name:</label>
+            <input type="text" class="add-input" name="full_name" id="full_name" required>
+          </div>
+          <div id="form-email">
+            <label for="email">Email address:</label>
+            <input type="text" class="add-input" name="email" id="email" autocomplete="on" required>
+          </div>
+          <div id="form-phone">
+            <label for="phone_number">Telephone number:</label>
+            <input type="text" class="add-input" name="phone_number" id="phone_number" required>
+          </div>
+          <div id="form-buttons">
+            <button type="submit" class="button" id="create-contact">Submit</button>
+            <button type="button" class="button" id="back-button">Back</button>
+          </div>
+        </div>
+        <div id="tag-container">
+          <input type="text" id="tag-field">
+          <button type="button" id="add-tag">Add Tag</button>
+        <div id="tags">
+        </div>
+      </div>
+      </form>
+    </div>
+      <div id="add-search">
+        <button class="button" id="add-button">Add Contact</button>
+        <input id="search-box" size="12" type="text" placeholder="Search">
+      </div>
+
+      <script id="contact-template" type="text/x-handlebars-template">
+        {{#if searchContacts.length}}
+        {{#each searchContacts}}
+        <li>
+          <div class="contact-body">
+            <div class="contact-head">
+              <h3>{{full_name}}</h3>
+            </div>
+            <dl>
+              <dt>Email:</dt>
+              <dd>{{email}}</dd>
+              <dt>Phone Number:</dt> 
+              <dd>{{phone_number}}</dd>
+              <dt>Tags:</dt>
+              {{#each tags}}
+              <button type="button" class="tag-link">{{this}}</button>
+              {{/each}}
+            </dl>
+          </div>
+          
+          <div class="contact-buttons">
+          
+            <button class="contact-button" id="edit-button" data-id="{{id}}">Edit</button>
+            <button class="contact-button" id="delete-button" data-id="{{id}}">Delete</button>
+          </div>
+        </li>
+        {{/each}}
+        {{else}}
+          <h2 id="no-contacts">There are no contacts.</h2>
+        {{/if}}
+      </script>
+
+      <div id="contact-box">
+        <ul id="contact-list">
+        </ul>
+      </div>
+  </main>
+</body>
+</html>
